@@ -2,6 +2,16 @@
     color:#2DFCD8;
 }
 
+.primary-color{
+    color: #FA2759;
+}
+
+.greeting{
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
 .home-body {
     width: 100%;
     height: calc(100vh - 80px);
@@ -11,6 +21,8 @@
 
 .left-side {
     width: 60%;
+    display: flex;
+    line-height: 1.5;
 }
 
 .right-side {
