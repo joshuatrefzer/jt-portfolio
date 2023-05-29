@@ -1,0 +1,20 @@
+$distance-lr: 120px;
+
+.header {
+    width: 100vw;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.app-content {
+    position: absolute;
+    top: 80px;
+    right: $distance-lr;
+    left: $distance-lr;
+    width: auto;
+    bottom: 0;
+}
+
