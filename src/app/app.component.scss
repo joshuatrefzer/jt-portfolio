@@ -1,9 +1,10 @@
-$distance-lr: 120px;
 
 .header {
     width: 100vw;
     max-width: 100%;
-    position: absolute;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
     top: 0;
     right: 0;
     left: 0;
@@ -12,8 +13,8 @@ $distance-lr: 120px;
 .app-content {
     position: absolute;
     top: 80px;
-    right: $distance-lr;
-    left: $distance-lr;
+    right: 0;
+    left: 0;
     width: auto;
     bottom: 0;
 }
