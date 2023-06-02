@@ -5,12 +5,9 @@
 }
 
 .skill-body {
-    height: calc(100vh - 80px);
     background-color: #1A1A1A;
     position: relative;
-    top: 100vh;
-    left: 0;
-    right: 0;
+    min-height: calc(100vh - 80px);
     @extend .center;
 }
 
@@ -30,7 +27,7 @@
 }
 
 .skill {
-    margin: 20px;
+    margin: 30px;
     height: 120px;
     width: 180px;
     background-color: white;

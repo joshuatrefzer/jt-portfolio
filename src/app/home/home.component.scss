@@ -16,10 +16,8 @@ $primary-color: #FA2759;
 }
 
 .home-body {
-    position: absolute;
-    top: 0;
-    right: 120px;
-    left: 120px;
+    margin-right: 120px;
+    margin-left: 120px;
     width: auto;
     height: calc(100vh - 80px);
     display: flex;
@@ -44,12 +42,18 @@ $primary-color: #FA2759;
     margin-top: 50px;
     color: $secondary-color;
     font-size: 25px;
+    font-weight: bold;
     padding: 20px;
     width: 200px;
     border: 2px $secondary-color solid;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+        background-color: $secondary-color;
+        color: white;
+    }
 }
 
 .arrow-down {

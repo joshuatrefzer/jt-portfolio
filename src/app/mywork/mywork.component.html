@@ -1,0 +1,16 @@
+<div class="mywork">
+    <div class="h2">MY Work</div>
+
+    <div class="filter-buttons">
+        <div id="button0" (click)="selectButton(0)" class="filter-button">All</div>
+        <div id="button1" (click)="selectButton(1)" class="filter-button">JavaScript</div>
+        <div id="button2" (click)="selectButton(2)" class="filter-button">Angular</div>
+    </div>
+
+    <div class="projects">
+        <img (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)"  class="project" src="" alt="JOIN">
+        <img (mouseenter)="showDescription(1)" (mouseleave)="hideDescription(1)" class="project" src="assets/img/lieferando.png" alt="LIEFERANDO">
+        <img (mouseenter)="showDescription(2)" (mouseleave)="hideDescription(2)" class="project" src="" alt="POLLO LOCO">
+        <img (mouseenter)="showDescription(3)" (mouseleave)="hideDescription(3)" class="project" src="" alt="SLACK-CLONE">
+    </div>
+</div>

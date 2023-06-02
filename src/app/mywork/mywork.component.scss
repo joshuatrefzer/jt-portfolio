@@ -1,0 +1,70 @@
+$primary-color: #FA2759;
+$secondary-color: #2DFCD8;
+
+.mywork {
+    width: calc(100% - 240px) ;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 120px;
+
+}
+
+.h2 {
+    margin-top: 30px;
+    font-size: 36px;
+    max-height: 200px;
+}
+
+.filter-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-button {
+    border: 1px $primary-color solid;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.filter-selected {
+    color: white;
+    background-color: $primary-color;
+    &:hover {
+        color: white !important;
+    }
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 70%;
+    min-height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.project {
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border: #2DFCD8 1px solid;
+}
+
+
+
+
+

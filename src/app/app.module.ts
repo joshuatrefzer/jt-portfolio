@@ -7,6 +7,8 @@ import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MyworkComponent } from './mywork/mywork.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SkillsComponent } from './skills/skills.component';
     ContentComponent,
     HeaderComponent,
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    MyworkComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

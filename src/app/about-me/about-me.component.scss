@@ -1,0 +1,100 @@
+$primary-color: #FA2759;
+$secondary-color: #2DFCD8;
+$side-margin: 0px 120px;
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me {
+    background-color: #1A1A1A;
+    flex-direction: column;
+    justify-content: flex-start;
+    // position: relative;
+    min-height: calc(100vh - 80px);
+    @extend .center;
+}
+
+
+.top-section {
+    min-height: 300px;
+    height: 30%;
+    margin: $side-margin;
+    width: calc(100% - 240px);
+    @extend .center;
+    border-bottom: #2DFCD8 1px solid;
+}
+
+
+.icon {
+    height: 250px;
+    width: 50%;
+    @extend .center;
+}
+
+.icon-bubble {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: $primary-color;
+}
+
+.text {
+    height: 250px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    div {
+        margin-right: 50px;
+    }
+}
+
+
+.bottom-section {
+    margin: $side-margin;
+    width: calc(100% - 240px);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.cv {
+    box-shadow: #121212 2px 2px 10px 10px;
+    background-color: #1f1f1f;
+    height: 300px;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cv-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: $secondary-color;
+    @extend .center;
+    img {
+        height: 20px;
+    }
+}
+
+.cv-text {
+    text-align: center;
+    h2 {
+        margin: 20px 0;
+        font-weight: 200;
+        font-size: 20px;
+    }
+}

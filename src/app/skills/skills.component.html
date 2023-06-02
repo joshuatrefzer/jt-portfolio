@@ -1,11 +1,13 @@
 <div class="skill-body">
     <div class="h2">MY Skills</div>
     <div class="skills">
-        <div *ngFor="let item of skills" class="skill">
+
+        <div *ngFor="let item of skills; let i = index" class="skill">
             <span>{{ item }}</span>
             <div class="skill-img">
-                <img src="assets/img/skills/0.png" alt="">
+                <img src="assets/img/skills/{{i}}.png" alt="">
             </div>
         </div>
+        
     </div>
 </div>
