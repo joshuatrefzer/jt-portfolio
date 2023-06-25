@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SkillsComponent  {
 
   skills = [
-    'Java Script',
+    'JavaScript',
     'Angular',
     'HTML / CSS',
     'SCRUM',

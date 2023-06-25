@@ -1,0 +1,99 @@
+footer {
+    width: calc(100% - 100px);
+    height: 120px;
+    background-color: white;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.links {
+    img {
+        height: 50px;
+
+        &:hover {
+            scale: 1.2;
+            transition: scale ease-in-out 250ms;
+        }
+    }
+
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back {
+    background-color:unset;
+    color: white;
+    border: 1px solid #2DFCD8;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+
+    &:hover {
+        background-color: #2DFCD8;
+        cursor: pointer;
+    }
+  }
+
+  
+  .popup-content {
+    overflow-y: scroll;
+    background-color:rgb(67, 67, 67);
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: 70%;
+    position: relative;
+  }
+  
+
+.impressum-links {
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover {
+        transition: all 200ms ease-in-out;
+        color: #1A1A1A;
+    }
+}
+
+@media (max-width:1200px) {
+    footer {
+        height: 60px;
+    }
+
+    .links {
+        img {
+            height: 30px;
+        }
+
+        width: 100px;
+    }
+
+    .impressum-links {
+        font-size: 10px;
+    }
+}

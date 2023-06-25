@@ -1,5 +1,6 @@
 $distance-lr: 120px;
-$primary-color: #FA2759;
+// $primary-color: #FA2759;
+$primary-color: #e89f4c;
 
 
 
@@ -8,6 +9,67 @@ $primary-color: #FA2759;
     justify-content: center;
     align-items: center;
 }
+
+.burger-menu {
+    display: none;
+    border: none !important;
+    z-index: 20;
+
+}
+
+.d-none {
+    display: none;
+}
+
+.links-mobile {
+    display: none;
+    justify-content: space-between;
+    padding: 0px 17%;
+    align-items: center;
+    background-color: #1A1A1A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    z-index: 10;
+    animation: slideInFromRight 0.5s ease-in-out;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.hide {
+    animation: slideOutToRight 0.5s ease-in-out;
+    transform: translateX(100%);
+  }
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
 
 .global-margin {
     margin: 0px $distance-lr;
@@ -22,23 +84,27 @@ header {
     @extend .global-margin;
 
     img {
-        height: 20px;
-        width: 20px;
-        border: 1px grey solid;
-        border-radius: 100%;
-        padding: 10px;
-        box-shadow: rgba(128, 128, 128, 0.326) 2px 2px 5px 2px;
+        height: 30px;
+        width: 30px;
     }
+}
+
+.logo {
+    height: 40px !important;
+    width: 40px !important;
 }
 
 .links {
     gap: 30px;
     @extend .center;
+
     a {
         text-decoration: none;
         color: white;
         cursor: pointer;
-    } & a:hover {
+    }
+
+    & a:hover {
         color: hsl(0, 0%, 82%);
     }
 
@@ -46,4 +112,38 @@ header {
 
 .selected-primary {
     color: $primary-color !important;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+
+
+
+@media (max-width:1200px) {
+
+    .links-mobile {
+        display: flex;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        transition: transform 0.5s;
+    }
+
+    .global-margin {
+        margin: 0px 20px;
+    }
+
+    header {
+        height: 60px;
+        margin: 0px 15px;
+    }
+
 }

@@ -1,0 +1,44 @@
+<div id="contact" class="contact-body">
+    <form (submit)="sendMail()" [formGroup]="reactiveForm">
+        <div (click)="closePopup()" id="mail-send" class="mail-send-popup d-none">
+            Mail has been sent, <br> thank you!
+        </div>
+        <div class="h2">Contact me.</div>
+
+        <!-- Name -->
+        <p>Name:</p>
+        <input placeholder="Enter your name" required type="text" formControlName="name" #nameField>
+
+        <ng-container *ngIf="reactiveForm.controls['name'].dirty || reactiveForm.controls['name'].touched ">
+            <p *ngIf="reactiveForm.controls['name'].errors?.['required']" class="error">please enter your name </p>
+            <p *ngIf="reactiveForm.controls['name'].errors?.['minlength']" class="error"> a minimum of {{
+                reactiveForm.controls['name'].errors?.['minlength'].requiredLength }} letters are needed</p>
+        </ng-container>
+
+
+        <!-- Mail -->
+        <p>Mail:</p>
+        <input placeholder="Enter your e-mail" required type="email" formControlName="email" #mailField>
+
+        <ng-container *ngIf="reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched ">
+            <p *ngIf="reactiveForm.controls['email'].errors?.['required']" class="error">please enter your e-mail</p>
+            <p *ngIf="reactiveForm.controls['email'].errors?.['email']" class="error">enter a valid email</p>
+        </ng-container>
+
+        <!-- Message -->
+        <p>Message:</p>
+        <textarea placeholder="Enter your message" required type="text" formControlName="message"
+            #messageField></textarea>
+
+        <ng-container *ngIf="reactiveForm.controls['message'].dirty || reactiveForm.controls['message'].touched ">
+            <p *ngIf="reactiveForm.controls['message'].errors?.['required']" class="error">please enter your message</p>
+            <p *ngIf="reactiveForm.controls['message'].errors?.['minlength']" class="error">a minimum of {{
+                reactiveForm.controls['message'].errors?.['minlength'].requiredLength }} letters are needed</p>
+        </ng-container>
+
+
+
+        <div class="button-container"><button [disabled]="!reactiveForm.valid" type="submit"
+                [class.valid-button]="reactiveForm.valid" class="submit-button" #sendButton>Send</button></div>
+    </form>
+</div>

@@ -1,4 +1,4 @@
-<div class="mywork">
+<div id="portfolio" class="mywork">
     <div class="h2">MY Work</div>
 
     <div class="filter-buttons">
@@ -8,9 +8,19 @@
     </div>
 
     <div class="projects">
-        <img (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)"  class="project" src="" alt="JOIN">
-        <img (mouseenter)="showDescription(1)" (mouseleave)="hideDescription(1)" class="project" src="assets/img/lieferando.png" alt="LIEFERANDO">
-        <img (mouseenter)="showDescription(2)" (mouseleave)="hideDescription(2)" class="project" src="" alt="POLLO LOCO">
-        <img (mouseenter)="showDescription(3)" (mouseleave)="hideDescription(3)" class="project" src="" alt="SLACK-CLONE">
+        <div *ngFor="let project of myprojects; let i = index;" class="project-container" id="project-container0">
+            <div class="description" id="description{{i}}">
+                <div class="project-title">{{myprojects[i]['title']}}</div>
+                <div class="project-description">{{myprojects[i]['description']}}</div>
+                <div class="buttons">
+                    <a class="try-out-button"  target="_blank"  href="{{myprojects[i]['link']}}" >TRY OUT!</a>
+                    <a class="try-out-button github"  target="_blank"  href="{{myprojects[i]['github']}}" >Git Hub</a>
+                </div>
+            </div>
+            <img  class="project" src="{{myprojects[i]['src']}}" alt="JOIN">
+        </div>
+
     </div>
+
+
 </div>

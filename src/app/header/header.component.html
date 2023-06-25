@@ -1,9 +1,16 @@
 <header>
-    <img  src="/assets/img/initials.png" alt="">
-    <div class="links">
-        <a id="link0" (click)="selectLink(0)">HOME</a>
-        <a id="link1" (click)="selectLink(1)">ABOUT</a>
-        <a id="link2" (click)="selectLink(2)">PORTFOLIO</a>
+    <div  [ngClass]="{'hide' : !hideMobileHeader } "  class="links-mobile">
+        <a  id="link-mobile0" (click)="selectLink(0); scrollToTop()">HOME</a>
+        <a href="#portfolio"  id="link-mobile1" (click)="selectLink(1)">PORTFOLIO</a>
+        <a href="#contact"  id="link-mobile2" (click)="selectLink(2)">CONTACT</a>
     </div>
+
+    <img  class="logo" src="/assets/img/logo.png" alt="">
+    <div class="links hide-mobile">
+        <a  id="link0" (click)="selectLink(0); scrollToTop()">HOME</a>
+        <a href="#portfolio"  id="link1" (click)="selectLink(1)">PORTFOLIO</a>
+        <a href="#contact"  id="link2" (click)="selectLink(2)">CONTACT</a>
+    </div>
+    <img [ngClass]="{ 'rotate': isRotated }" (click)="rotateImage()" src="assets/img/Menu-Icon.png" id="burger-menu" alt="" class="burger-menu">
 </header>
 

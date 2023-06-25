@@ -1,15 +1,21 @@
 $secondary-color: #2DFCD8;
-$primary-color: #FA2759;
+// $primary-color: #FA2759;
+$primary-color: #e89f4c;
+
 
 .selected-secondary {
     color: $secondary-color;
 }
 
-.primary-color{
-    color: #FA2759;
+.primary-color {
+    color: $primary-color;
 }
 
-.greeting{
+a {
+    text-decoration: none;
+}
+
+.greeting {
     margin-top: 100px;
     font-size: 50px;
     font-weight: bold;
@@ -19,7 +25,8 @@ $primary-color: #FA2759;
     margin-right: 120px;
     margin-left: 120px;
     width: auto;
-    height: calc(100vh - 80px);
+    padding-top: 80px;
+    height: calc(100vh - 160px);
     display: flex;
     justify-content: center;
 }
@@ -50,6 +57,7 @@ $primary-color: #FA2759;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
     &:hover {
         background-color: $secondary-color;
         color: white;
@@ -70,5 +78,78 @@ $primary-color: #FA2759;
     width: 300px;
     background-color: $primary-color;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+
+    img {
+        height: 250px;
+        
+    }
 }
 
+@media (max-width:1200px) {
+    .home-body {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        min-height: calc(100vh - 60px);
+        padding: 0;
+        
+    }
+
+    .contact-me-button {
+        margin-bottom: 100px;
+    }
+
+    .greeting {
+        text-align: center;
+    }
+
+    .profile-bubble {
+        margin-top: 0;
+        img {
+            height: 190px;
+        }
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .right-side {
+        width: auto;
+    }
+
+    .left-side {
+        width: 80%;
+        align-items: center;
+    }
+}
+
+@media (max-width:675px) {
+    .greeting {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:550px) {
+    .greeting {
+        font-size: 25px;
+        margin-top: 40px;
+    }
+
+    .profile-bubble {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-me-button {
+        height: 10px;
+        width: 150px;
+        font-size: 20px;
+    }
+}

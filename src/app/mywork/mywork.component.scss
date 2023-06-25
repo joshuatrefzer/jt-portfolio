@@ -1,14 +1,17 @@
-$primary-color: #FA2759;
+// $primary-color: #FA2759;
 $secondary-color: #2DFCD8;
+$primary-color: #e89f4c;
 
 .mywork {
-    width: calc(100% - 240px) ;
+    width: calc(100% - 240px);
+    padding-top: 80px;
     min-height: calc(100vh - 80px);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px 120px;
+    padding-bottom: 110px;
 
 }
 
@@ -19,7 +22,7 @@ $secondary-color: #2DFCD8;
 }
 
 .filter-buttons {
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +36,7 @@ $secondary-color: #2DFCD8;
     justify-content: center;
     padding: 10px;
     cursor: pointer;
+
     &:hover {
         color: $primary-color;
     }
@@ -41,6 +45,7 @@ $secondary-color: #2DFCD8;
 .filter-selected {
     color: white;
     background-color: $primary-color;
+
     &:hover {
         color: white !important;
     }
@@ -51,20 +56,131 @@ $secondary-color: #2DFCD8;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 70%;
+    max-width: 80%;
     min-height: 400px;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 50px;
 }
 
+
 .project {
-    height: 300px;
-    width: 300px;
-    margin: 20px;
-    border: #2DFCD8 1px solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 
+.project-container {
+    position: relative;
+    height: 250px;
+    width: 400px;
+    margin: 10px;
+    cursor: pointer;
+    border: grey 2px solid;
+
+    img {
+        z-index: 12;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.2;
+            transition: all 0.3s ease-in-out;
+            z-index: 1;
+        }
+    }
+}
 
 
+.description {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    z-index: 3;
+}
 
+.try-out-button {
+    text-decoration: none;
+    color: white;
+    border: $secondary-color 1px solid;
+    padding: 10px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+.github {
+    border: $primary-color 1px solid !important;
+    &:hover {
+        background-color: $primary-color !important;
+    }
+}
+
+.buttons {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-title {
+    z-index: 2;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
+
+@media (max-width:1200px) {
+
+    .mywork {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: auto;
+    }
+
+
+    .project-description {
+        font-size: 12px;
+    }
+
+    .h2 {
+        margin-top: 30px;
+        width: 200px;
+        font-size: 25px;
+        max-height: 200px;
+        text-align: center;
+    }
+
+    .filter-button {
+        min-width: 75px;
+    }
+
+}
+
+@media (max-width:530px) {
+    .project-container {
+       height: 160px;
+       width: 240px;
+    }
+
+    .project-description {
+        font-size: 10px;
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+}
