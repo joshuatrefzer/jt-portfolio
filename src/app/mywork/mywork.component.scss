@@ -119,6 +119,7 @@ $primary-color: #e89f4c;
 
 .github {
     border: $primary-color 1px solid !important;
+
     &:hover {
         background-color: $primary-color !important;
     }
@@ -172,11 +173,16 @@ $primary-color: #e89f4c;
 
 @media (max-width:530px) {
     .project-container {
-       height: 160px;
-       width: 240px;
+        height: 160px;
+        width: 240px;
     }
 
     .project-description {
+        font-size: 10px;
+    }
+
+    .try-out-button {
+        padding: 5px 20px;
         font-size: 10px;
     }
 

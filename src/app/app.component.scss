@@ -20,3 +20,10 @@
     bottom: 0;
 }
 
+@media (max-height: 850px) and (max-width:1200px) {
+    .app-content {
+        top: 300px;
+    }
+}
+
+
